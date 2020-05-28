@@ -4,6 +4,8 @@ import Vuex from 'vuex'
 import stocks from './modules/stocks'
 import portfolio from './modules/portfolio'
 
+import actions from './modules/actions'
+
 Vue.use(Vuex)
 
 //THIS IS THE STATE MANAGER
@@ -14,5 +16,6 @@ export default new Vuex.Store({
     modules: {
         stocks,
         portfolio
-    }
+    }, 
+    actions
 })

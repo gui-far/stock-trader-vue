@@ -17,6 +17,9 @@ import router from './router'
 // With Vuex make easier to manipulate components state and the data flow between then
 import store from './store/store'
 
+//For HTTP requests
+import './plugins/axios'
+
 //No tips on startup
 Vue.config.productionTip = false
 

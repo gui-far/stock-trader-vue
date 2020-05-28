@@ -21,6 +21,18 @@
       <v-btn text @click="endDay">Finalizar Dia</v-btn>
     </v-toolbar-items>
 
+    <v-toolbar-items>
+      <v-btn text @click="saveData">Salvar Dados</v-btn>
+    </v-toolbar-items>
+
+    <v-toolbar-items>
+      <v-btn text @click="loadDataLocal">Carregar Dados</v-btn>
+    </v-toolbar-items>
+
+    <v-toolbar-items>
+      <v-btn text @click="endDay">Finalizar Dia</v-btn>
+    </v-toolbar-items>
+
     <v-layout align-center>
       <span class="text-uppercas grey--text text--darken-2">Saldo:</span>
 
@@ -33,6 +45,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
   computed: {
     //This will be called only when "funds" variable changes (since its a computed method)
@@ -42,10 +55,20 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['randomizeStocks','loadData']),
     //Will change the stock price (randomize...)
     //Since the stocks are components, their state are also been managed by Vuex
     endDay() {
-      this.$store.dispatch("randomizeStocks");
+      this.randomizeStocks()
+    },
+    //This method will access the axios $http method
+    //"$ http" was registered globally inside "axios.js" file
+    saveData() {
+      const { funds, stockPortfolio, stocks } = this.$store.getters;
+      this.$http.put('data.json', {funds, stockPortfolio, stocks})
+    },
+    loadDataLocal() {
+      this.loadData()
     }
   }
 };
