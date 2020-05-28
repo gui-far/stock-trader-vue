@@ -3,6 +3,7 @@
 
 <template >
   <v-app-bar app>
+
     <v-toolbar-title class="headline text-uppercase mr-4">
       <span>Stock</span>
       <span class="font-weight-light">Trader</span>
@@ -16,25 +17,10 @@
 
     <v-spacer></v-spacer>
 
-    <v-menu offset-y>
-      <!-- This v-slot... -->
-      <template v-slot:activator="{ on: menu }">
-        <v-toolbar-items>
-          <v-btn text @click="endDay">Finalizar Dia</v-btn>
-          <!-- ... and this v-on -->
-          <v-btn text to="/" v-on="{ ...menu }">Dropdown</v-btn>
-        </v-toolbar-items>
-      </template>
-      <!-- ...will call these items -->
-      <v-list>
-        <v-list-item>
-          <v-list-item-title>Salvar Dados</v-list-item-title>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-title>Carregar Dados</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+    <v-toolbar-items>
+      <v-btn text @click="endDay">Finalizar Dia</v-btn>
+    </v-toolbar-items>
+
     <v-layout align-center>
       <span class="text-uppercas grey--text text--darken-2">Saldo:</span>
 
