@@ -53,10 +53,7 @@ Its an State Manager that orchestrate all the content.
 ITs one of the core features of this app.
 
 
-Docker:
-There are 2 containers.
-One with Alpine Image and NodeJs and One with Mysql Image.
-They share they own container network.
-The Mysql container have a shared volume with the host. This volume will allow "see" all files from this project.
+Vue-Router:
+Manages the path and components exhibition.
 
 ============================================================================================================================
