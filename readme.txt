@@ -22,6 +22,7 @@ Dependencies
 Vuetify:        Fronend HTML Framework
 Vuex:           State Manager
 Vue-Router:     Path "Resolver"
+Axios:          Http Request
 
 ============================================================================================================================
 
@@ -43,6 +44,9 @@ You can...
 4. TIP:
    Buy when price is low and sell when price is high.
    
+5. Save & Load
+   You can save and load your data remotely (Firebase)
+   
 
 ============================================================================================================================
 
@@ -55,5 +59,9 @@ ITs one of the core features of this app.
 
 Vue-Router:
 Manages the path and components exhibition.
+
+Axios:
+Helps with Http request.
+For this app will help connecto to Firebase.
 
 ============================================================================================================================
