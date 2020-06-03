@@ -12,6 +12,7 @@ Instructions:
 
 Download and simply run...
 
+"npm i"
 "npm run serve"
 
 
